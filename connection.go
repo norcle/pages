@@ -21,7 +21,7 @@ func ConnectDb() {
 }
 
 func migration() {
-	createPageQuery, err := DB.Query("CREATE TABLE IF NOT EXISTS pages (slug varchar(2body text)")
+	createPageQuery, err := DB.Query("CREATE TABLE IF NOT EXISTS pages (slug varchar(255) index, body text)")
 	if err != nil {
 		panic(err.Error())
 	}
